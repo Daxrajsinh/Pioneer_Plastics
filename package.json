@@ -16,7 +16,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@paypal/react-paypal-js": "^8.1.3",
     "bcrypt": "^5.1.0",
     "cloudinary": "^1.37.3",
     "concurrently": "^8.2.0",
@@ -28,8 +27,7 @@
     "framer-motion": "^10.16.4",
     "jsonwebtoken": "^9.0.1",
     "mongodb": "^5.7.0",
-    "mongoose": "^7.3.4",
-    "react-paypal-express-checkout": "^1.0.5"
+    "mongoose": "^7.3.4"
   },
   "devDependencies": {
     "nodemon": "^3.0.1"
