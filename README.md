@@ -52,3 +52,18 @@ To run the "PIONEER PLASTICS" project on your local machine, follow these steps:
    cd ../server
    npm install
 
+4. Start the development server:
+  # Start the server (from the 'server' directory)
+  npm start
+   
+  # Start the client (from the 'client' directory)
+  npm start
+
+5. Open your web browser and visit http://localhost:3000 to access the application.
+
+Project Structure
+The project is organized into two main directories:
+
+/client: Contains the frontend code built with React.
+/server: Contains the backend code built with Node.js and Express.
+
