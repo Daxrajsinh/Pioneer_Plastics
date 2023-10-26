@@ -57,7 +57,7 @@ To run the "PIONEER PLASTICS" project on your local machine, follow these steps:
   npm start
    
   # Start the client (from the 'client' directory)
-  npm start
+  npm run dax
 
 5. Open your web browser and visit http://localhost:3000 to access the application.
 
