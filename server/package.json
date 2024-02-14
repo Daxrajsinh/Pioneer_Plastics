@@ -2,13 +2,13 @@
   "name": "pioneer_plastics",
   "version": "1.0.0",
   "description": "",
-  "main": "server/index.js",
+  "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "server": "cd server && nodemon index.js",
-    "client": "cd client && npm run start",
-    "server-install": "cd server && npm install",
-    "client-install": "cd client && npm install",
+    "server": "nodemon index.js",
+    "client": "cd ../client && npm run start",
+    "server-install": "npm install",
+    "client-install": "cd ../client && npm install",
     "install-all": "concurrently \"npm run server-install\" \"npm run client-install\"",
     "dax": "concurrently \"npm run server\" \"npm run client\""
   },
