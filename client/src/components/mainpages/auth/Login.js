@@ -4,6 +4,7 @@ import axios from 'axios';
 import './login.css';
 import logo_img from '../../headers/icon/transparent_logo.png'
 
+const frontendUrl = process.env.FRONTEND_URL;
 function Login() {
     const [user, setUser] = useState({
         email: '',
@@ -18,7 +19,7 @@ function Login() {
     const loginSubmit = async (e) => {
         e.preventDefault();
         try {
-            await axios.post('http://localhost:3000/user/login', { ...user });
+            await axios.post(`${frontendUrl}/user/login`, { ...user });
             localStorage.setItem('firstLogin', true);
             window.location.href = '/';
         } catch (err) {
