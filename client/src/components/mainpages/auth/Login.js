@@ -4,7 +4,7 @@ import axios from 'axios';
 import './login.css';
 import logo_img from '../../headers/icon/transparent_logo.png'
 
-const frontendUrl = process.env.FRONTEND_URL;
+const frontendUrl = process.env.REACT_APP_FRONTEND_URL;
 function Login() {
     const [user, setUser] = useState({
         email: '',
