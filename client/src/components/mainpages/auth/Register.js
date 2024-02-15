@@ -6,7 +6,7 @@ import logo_img from '../../headers/icon/transparent_logo.png'
 
 
 const frontendUrl = process.env.REACT_APP_FRONTEND_URL;
-// console.log("url is : ", frontendUrl)
+console.log("url is : ", frontendUrl)
 
 function Register() {
     const [user, setUser] = useState({
@@ -23,7 +23,7 @@ function Register() {
     const registerSubmit = async (e) => {
         e.preventDefault();
         try {
-            await axios.post(`/user/register`, { ...user });
+            await axios.post(`${frontendUrl}user/register`, { ...user });
             localStorage.setItem('firstLogin', true);
             window.location.href = '/';
         } catch (err) {
