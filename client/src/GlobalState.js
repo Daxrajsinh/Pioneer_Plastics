@@ -6,7 +6,7 @@ import CategoriesAPI from './api/CategoriesAPI'
 import axios from 'axios'
 
 export const GlobalState = createContext()
-
+const backendUrl = process.env.REACT_APP_BACKEND_URL;
 
 export const DataProvider = ({children}) =>{
     const [token, setToken] = useState(false)
@@ -16,7 +16,7 @@ export const DataProvider = ({children}) =>{
         const firstLogin = localStorage.getItem('firstLogin')
         if(firstLogin){
             const refreshToken = async () =>{
-                const res = await axios.get('/user/refresh_token')
+                const res = await axios.get(`${backendUrl}/user/refresh_token`)
         
                 setToken(res.data.accesstoken)
     
