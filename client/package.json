@@ -2,7 +2,7 @@
   "name": "client",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://Daxrajsinh.github.io/Pioneer_Plastics",
+  "homepage": "https://yashgo09.github.io/Pioneer_Plastics",
   "dependencies": {
     "@coreui/react": "^5.0.0-alpha.3",
     "@testing-library/jest-dom": "^5.16.5",
