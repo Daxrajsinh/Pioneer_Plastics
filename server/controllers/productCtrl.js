@@ -47,7 +47,13 @@ const productCtrl = {
             const features = new APIfeatures(Products.find(), req.query)
             .filtering().sorting().paginating()
 
+            console.log('hi');
+
+            console.log('features', features)
+
             const products = await features.query
+
+            console.log('products', products);
 
             res.json({
                 status: 'success',

@@ -26,6 +26,7 @@ app.use('/api', require('./routes/productRouter'))
 const URI = process.env.MONGODB_URL;
 mongoose
   .connect(URI, {
+    dbName: 'ecommerce',
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
