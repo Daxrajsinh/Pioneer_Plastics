@@ -30,8 +30,8 @@ const userCtrl = {
 
             res.cookie('refreshtoken', refreshtoken, {
                 httpOnly: true,
-                path: `${backendUrl}/user/refresh_token`,
-                maxAge: 7*24*60*60*1000 // 7d
+                maxAge: 7*24*60*60*1000, // 7d
+                credentials : 'include',
             })
 
             res.json({accesstoken})
@@ -56,8 +56,8 @@ const userCtrl = {
 
             res.cookie('refreshtoken', refreshtoken, {
                 httpOnly: true,
-                path: `${backendUrl}/user/refresh_token`,
-                maxAge: 7*24*60*60*1000 // 7d
+                maxAge: 7*24*60*60*1000, // 7d
+                credentials : 'include',
             })
 
             res.json({accesstoken})
@@ -68,7 +68,8 @@ const userCtrl = {
     },
     logout: async (req, res) =>{
         try {
-            res.clearCookie('refreshtoken', {path: `${backendUrl}/user/refresh_token`})
+            // res.clearCookie('refreshtoken', {path: `${backendUrl}/user/refresh_token`})
+            res.clearCookie('refreshtoken')
             return res.json({msg: "Logged out"})
         } catch (err) {
             return res.status(500).json({msg: err.message})
@@ -77,10 +78,10 @@ const userCtrl = {
     refreshToken: (req, res) =>{
         try {
             const rf_token = req.cookies.refreshtoken;
-            if(!rf_token) return res.status(400).json({msg: "Please Login or Register"})
+            if(!rf_token) return res.status(400).json({msg: "Please Login or Register 1"})
 
             jwt.verify(rf_token, process.env.REFRESH_TOKEN_SECRET, (err, user) =>{
-                if(err) return res.status(400).json({msg: "Please Login or Register"})
+                if(err) return res.status(400).json({msg: "Please Login or Register 2"})
 
                 const accesstoken = createAccessToken({id: user.id})
 
