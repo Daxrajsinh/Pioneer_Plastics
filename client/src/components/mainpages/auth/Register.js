@@ -23,7 +23,7 @@ function Register() {
     const registerSubmit = async (e) => {
         e.preventDefault();
         try {
-            await axios.post(`${backendUrl}/user/register`, { ...user }, {withCredentials: true, sameSite: 'none'});
+            await axios.post(`${backendUrl}/user/register`, { ...user }, {withCredentials: true, sameSite: 'none', secure : true});
             localStorage.setItem('firstLogin', true);
             window.location.href = '/';
         } catch (err) {

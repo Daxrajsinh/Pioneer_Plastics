@@ -32,7 +32,8 @@ const userCtrl = {
                 httpOnly: true,
                 maxAge: 7*24*60*60*1000, // 7d
                 credentials : 'include',
-                sameSite: 'none'
+                sameSite: 'none',
+                secure : true
             })
 
             res.json({accesstoken})
@@ -59,7 +60,8 @@ const userCtrl = {
                 httpOnly: true,
                 maxAge: 7*24*60*60*1000, // 7d
                 credentials : 'include',
-                sameSite: 'none'
+                sameSite: 'none',
+                secure : true
             })
 
             res.json({accesstoken})
@@ -71,7 +73,7 @@ const userCtrl = {
     logout: async (req, res) =>{
         try {
             // res.clearCookie('refreshtoken', {path: `${backendUrl}/user/refresh_token`})
-            res.clearCookie('refreshtoken', {credentials : 'include', sameSite: 'none'})
+            res.clearCookie('refreshtoken', {credentials : 'include', sameSite: 'none', secure : true})
             return res.json({msg: "Logged out"})
         } catch (err) {
             return res.status(500).json({msg: err.message})

@@ -12,6 +12,7 @@ app.use(cookieParser());
 app.use(cors({
   origin: [process.env.REACT_APP_FRONTEND_URL],
   credentials: true,
+  secure: true,
 }));
 app.use(fileUpload({ useTempFiles: true }));
 
