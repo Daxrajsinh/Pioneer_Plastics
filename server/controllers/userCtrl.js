@@ -2,6 +2,8 @@ const Users = require('../models/userModel')
 const bcrypt = require('bcrypt')
 const jwt = require('jsonwebtoken')
 
+const backendUrl = process.env.REACT_APP_BACKEND_URL;
+
 const userCtrl = {
     register: async (req, res) =>{
         try {
@@ -28,7 +30,7 @@ const userCtrl = {
 
             res.cookie('refreshtoken', refreshtoken, {
                 httpOnly: true,
-                path: '/user/refresh_token',
+                path: `${backendUrl}/user/refresh_token`,
                 maxAge: 7*24*60*60*1000 // 7d
             })
 
@@ -54,7 +56,7 @@ const userCtrl = {
 
             res.cookie('refreshtoken', refreshtoken, {
                 httpOnly: true,
-                path: '/user/refresh_token',
+                path: `${backendUrl}/user/refresh_token`,
                 maxAge: 7*24*60*60*1000 // 7d
             })
 
@@ -66,7 +68,7 @@ const userCtrl = {
     },
     logout: async (req, res) =>{
         try {
-            res.clearCookie('refreshtoken', {path: '/user/refresh_token'})
+            res.clearCookie('refreshtoken', {path: `${backendUrl}/user/refresh_token`})
             return res.json({msg: "Logged out"})
         } catch (err) {
             return res.status(500).json({msg: err.message})
