@@ -5,8 +5,8 @@ import './login.css'; // Import the same CSS file used in login.js
 import logo_img from '../../headers/icon/transparent_logo.png'
 
 
-const frontendUrl = process.env.REACT_APP_FRONTEND_URL;
-console.log("url is : ", frontendUrl)
+const backendUrl = process.env.REACT_APP_BACKEND_URL;
+console.log("url is : ", backendUrl)
 
 function Register() {
     const [user, setUser] = useState({
@@ -23,8 +23,7 @@ function Register() {
     const registerSubmit = async (e) => {
         e.preventDefault();
         try {
-            // await axios.post(`${frontendUrl}user/register`, { ...user });
-            await axios.post(`${frontendUrl}/user/register`, { ...user });
+            await axios.post(`${backendUrl}/user/register`, { ...user });
             localStorage.setItem('firstLogin', true);
             window.location.href = '/';
         } catch (err) {

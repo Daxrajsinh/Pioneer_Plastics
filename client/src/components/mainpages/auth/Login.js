@@ -4,7 +4,7 @@ import axios from 'axios';
 import './login.css';
 import logo_img from '../../headers/icon/transparent_logo.png'
 
-const frontendUrl = process.env.REACT_APP_FRONTEND_URL;
+const backendUrl = process.env.REACT_APP_BACKEND_URL;
 function Login() {
     const [user, setUser] = useState({
         email: '',
@@ -20,7 +20,7 @@ function Login() {
         e.preventDefault();
         try {
             // await axios.post(`${frontendUrl}user/login`, { ...user });
-            await axios.post(`${frontendUrl}/user/login`, { ...user });
+            await axios.post(`${backendUrl}/user/login`, { ...user });
             localStorage.setItem('firstLogin', true);
             window.location.href = '/';
         } catch (err) {
