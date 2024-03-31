@@ -1,6 +1,7 @@
 import {useState, useEffect} from 'react'
 import axios from 'axios'
 
+const backendUrl = process.env.REACT_APP_BACKEND_URL;
 function UserAPI(token) {
     const [isLogged, setIsLogged] = useState(false)
     const [isAdmin, setIsAdmin] = useState(false)
@@ -10,7 +11,7 @@ function UserAPI(token) {
         if(token){
             const getUser = async () =>{
                 try {
-                    const res = await axios.get('/user/infor', {
+                    const res = await axios.get(`${backendUrl}/user/infor`, {
                         headers: {Authorization: token}
                     })
 
@@ -47,7 +48,7 @@ function UserAPI(token) {
         if(check){
             setCart([...cart, {...product, quantity: 1}])
 
-            await axios.patch('/user/addcart', {cart: [...cart, {...product, quantity: 1}]}, {
+            await axios.patch(`${backendUrl}/user/addcart`, {cart: [...cart, {...product, quantity: 1}]}, {
                 headers: {Authorization: token}
             })
 
