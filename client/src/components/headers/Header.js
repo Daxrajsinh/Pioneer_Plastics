@@ -17,8 +17,10 @@ function Header() {
     const [search, setSearch] = state.productsAPI.search;
     // const [searchResultsEmpty, setSearchResultsEmpty] = useState(false);
 
+    const backendUrl = process.env.REACT_APP_BACKEND_URL;
+    
     const logoutUser = async () => {
-        await axios.get('/user/logout');
+        await axios.get(`${backendUrl}/user/logout`);
 
         localStorage.removeItem('firstLogin');
 

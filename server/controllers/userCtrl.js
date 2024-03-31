@@ -69,7 +69,7 @@ const userCtrl = {
     logout: async (req, res) =>{
         try {
             // res.clearCookie('refreshtoken', {path: `${backendUrl}/user/refresh_token`})
-            res.clearCookie('refreshtoken')
+            res.clearCookie('refreshtoken', {credentials : 'include'})
             return res.json({msg: "Logged out"})
         } catch (err) {
             return res.status(500).json({msg: err.message})
