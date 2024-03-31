@@ -1,0 +1,103 @@
+.login-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin-top: 30px;
+    background-size: cover;
+    height: 100vh;
+}
+
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(238, 237, 237, 0.9);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+    transition: transform 0.3s, opacity 0.3s;
+    font-family: 'Your Custom Font', sans-serif;
+}
+
+.login-header {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.login-header img {
+    width: 200px; /* Adjust the image width as needed */
+    height: 100px; /* Adjust the image height as needed */
+}
+
+form {
+    flex: 1; /* Take up remaining space */
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 0; /* Remove top and bottom padding */
+}
+
+h2 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.input-container {
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+input:focus {
+    border-color: #007BFF;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+button {
+    background-color: #454647;
+    color: #fff;
+    margin-top: 10px;
+    padding: 10px 15px; /* Adjust padding as needed */
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 16px;
+    text-transform: uppercase;
+    transition: background-color 0.3s;
+    min-width: 100px; /* Adjust min-width as needed */
+}
+
+button:hover {
+    background-color: #141313;
+}
+
+Link {
+    text-decoration: none;
+    color: #007BFF;
+    font-weight: bold;
+    transition: text-decoration 0.3s;
+}
+
+Link:hover {
+    text-decoration: underline;
+}
