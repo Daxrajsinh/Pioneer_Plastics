@@ -9,8 +9,6 @@ Welcome to the "PIONEER PLASTICS" project, an e-product catalog website develope
 3. [Getting Started](#getting-started)
 4. [Project Structure](#project-structure)
 5. [Technologies Used](#technologies-used)
-6. [Contributing](#contributing)
-7. [License](#license)
 
 ## Introduction
 
@@ -61,8 +59,11 @@ To run the "PIONEER PLASTICS" project on your local machine, follow these steps:
 
 5. Open your web browser and visit http://localhost:3000 to access the application.
 
-Project Structure
+## Project Structure
 The project is organized into two main directories:
 
 /client: Contains the frontend code built with React.
 /server: Contains the backend code built with Node.js and Express.
+
+## Technologies Used
+MERN Stack.
