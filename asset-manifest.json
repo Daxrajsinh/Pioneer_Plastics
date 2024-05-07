@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Pioneer_Plastics/static/css/main.7fce26e2.css",
-    "main.js": "/Pioneer_Plastics/static/js/main.e316a2cf.js",
+    "main.js": "/Pioneer_Plastics/static/js/main.c1653e46.js",
     "static/media/img2.png": "/Pioneer_Plastics/static/media/img2.f4ceb5b334557a52a78c.png",
     "static/media/transparent_logo.png": "/Pioneer_Plastics/static/media/transparent_logo.448397fc4da90ee1aba5.png",
     "static/media/img1.png": "/Pioneer_Plastics/static/media/img1.7765328d1a439b331aa6.png",
@@ -13,10 +13,10 @@
     "static/media/close.svg": "/Pioneer_Plastics/static/media/close.ea7c95d7120c0efcb4b16602bf9049a5.svg",
     "static/media/menu.svg": "/Pioneer_Plastics/static/media/menu.e8db7520285d01597a75c139d54e29ce.svg",
     "main.7fce26e2.css.map": "/Pioneer_Plastics/static/css/main.7fce26e2.css.map",
-    "main.e316a2cf.js.map": "/Pioneer_Plastics/static/js/main.e316a2cf.js.map"
+    "main.c1653e46.js.map": "/Pioneer_Plastics/static/js/main.c1653e46.js.map"
   },
   "entrypoints": [
     "static/css/main.7fce26e2.css",
-    "static/js/main.e316a2cf.js"
+    "static/js/main.c1653e46.js"
   ]
 }
